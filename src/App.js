@@ -1,7 +1,7 @@
 
 
 import { useEffect, useState } from "react";
-import Homepage from "./Homepage";
+import Homepage from "./Pages/Homepage/Homepage";
 import Login from "./Pages/login/Login";
 import Register from "./Pages/register/Register";
 import Watch from "./Pages/watch/Watch";

@@ -25,7 +25,7 @@ export default function Register(props) {
 
     }
     event.preventDefault();
-    console.log(props.setUsers);
+    console.log(props.user);
     props.setUsers((prev)=>{
       return [...prev,{email:email,password:password}]
 

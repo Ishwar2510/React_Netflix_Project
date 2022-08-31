@@ -35,16 +35,18 @@ function Featured({type,setWatch}) {
             </div>
            ) 
         }
-        <img  height="100%" width="100%" src="https://preview.redd.it/sygs5sh6hup21.jpg?auto=webp&s=c89fd0fedc031655dbaf8b5533799163e99bf08d"/>
+        <img  height="100%" width="100%" src="https://cdn.statically.io/img/timelinecovers.pro/facebook-cover/download/the-avengers-facebook-cover.jpg"/>
 
-        <div className='info' onClick={watch}>
+        <div className='info' >
 
           
            <h1 style={{color:'white'}}>The Avengers</h1>
             <div className='buttons'>
-                <button><PlayArrowIcon/><span>Play</span></button>
+                <button><PlayArrowIcon/><span onClick={watch}>Play</span></button>
                 <button ><InfoOutlinedIcon/><span>Info</span></button>
             </div>
+            <p style={{color:"Yellow"}}>The World is under the Thanoos Threat and its upto the Avengers to Save the World</p>
+
 
         </div>
     </div>

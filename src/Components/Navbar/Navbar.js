@@ -45,7 +45,7 @@ function Navbar(props) {
         <SearchIcon/>
         <span>Kid</span>
         <NotificationsIcon/>
-        <span>user</span>
+        <span>User</span>
 
         
         <div className="profile">

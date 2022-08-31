@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import './home.css'
-import Navbar from './Components/Navbar/Navbar'
-import Featured from './Components/featured/Featured'
-import List from './Components/List/List'
-import '../src/Components/List/Lists.css'
+import Navbar from '../../Components/Navbar/Navbar'
+import Featured from '../../Components/featured/Featured'
+import List from '../../Components/List/List'
+
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 
 
 
-function Homepage({setWatch,restart}) { 
+function Homepage({setWatch,restart,register}) { 
   const[count,setCount]=useState(0);
 
   const[data,setdata]=useState([
@@ -31,7 +31,7 @@ function Homepage({setWatch,restart}) {
   }
   return (
     <div className="home">
-    <Navbar restart={restart}/>
+    <Navbar register={register} restart={restart}/>
     <Featured type="movie" setWatch={setWatch} />
 
     <div style={{display:"flex" ,flexDirection:"column", position:"relative"}}>
