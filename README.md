@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+Hosted Link
+https://ishwar2510.github.io/React_Netflix_Project/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
