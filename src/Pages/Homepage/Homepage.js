@@ -47,7 +47,7 @@ function Homepage({setWatch,restart,register}) {
             <h3 style={{color:'white',marginLeft:'85px'}}>{elem.title}</h3>
             <div style={{display:"flex" ,flexDirection:"row", }}>
             <button style={{background:"none"}} onClick={leftArrow}><ArrowBackIosNewOutlinedIcon style={{width:'30px',height:"120px",color:"white"}}/></button>
-            <div  style={{display:"flex" ,flexDirection:"row",overflow:"hidden" ,width:"100%"}}>
+            <div  style={{display:"flex" ,flexDirection:"row",overflowX:"scroll" ,width:"100%"}}>
               <Link to ='/watch'><List card={elem.card} setWatch={setWatch}/></Link>
             </div>
             <button style={{background:"none"}} onClick={rightArrow}><ArrowForwardIosOutlinedIcon style={{width:'30px',height:"120px",color:"white"}}/></button>

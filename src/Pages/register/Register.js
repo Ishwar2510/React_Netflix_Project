@@ -34,7 +34,7 @@ export default function Register(props) {
       JSON.stringify({ mail: email, pswd: pwd })
     );
     navigate("/home")
-    dispatch({ type: "login" });
+    dispatch({ type: "register" });
     
     // console.log(props.user);
     // props.setUsers((prev)=>{

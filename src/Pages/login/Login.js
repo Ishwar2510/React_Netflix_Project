@@ -16,12 +16,16 @@ export default function Login(prop) {
       alert("pls enter details")
       return;
     }
-    localStorage.setItem(
-      "users",
-      JSON.stringify({ mail: email, pswd: pwd })
-    );
-    navigate("/home")
-    dispatch({ type: "login" });
+    let checkUser=JSON.parse(localStorage.getItem("users"));
+    if(checkUser.mail==email && checkUser.pswd==pwd){
+      navigate("/home")
+      dispatch({ type: "login" });
+    }else{
+      alert("Check your Credential")
+    }
+   
+
+    
   }
 
   function einput(event){

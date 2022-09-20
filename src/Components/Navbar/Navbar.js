@@ -33,7 +33,7 @@ function Navbar(props) {
         
     }
     function logout() {
-      localStorage.removeItem("users");
+      
       navigate("/login")
       dispatch({ type: "logout" });
     }

@@ -10,7 +10,7 @@ const initialState = {
 
 function logedReducer(state = initialState, action) {
   
-  if (action.type == "login") {
+  if (action.type == "register") {
     
     return {
       ...state,
@@ -19,7 +19,17 @@ function logedReducer(state = initialState, action) {
     };
   }
   if (action.type == "logout") {
-    return initialState;
+    console.log("user is ",{...state,loged:false})
+    return { 
+      ...state,
+      loged : false
+    }
+  }
+  if(action.type=="login"){
+    return{
+      ...state,
+      loged:true
+    }
   }
   return state;
 }
