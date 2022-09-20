@@ -3,6 +3,8 @@ import './home.css'
 import Navbar from '../../Components/Navbar/Navbar'
 import Featured from '../../Components/featured/Featured'
 import List from '../../Components/List/List'
+import { useDispatch, useSelector } from "react-redux";
+import {Link} from 'react-router-dom'
 
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
@@ -11,6 +13,8 @@ import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutl
 
 function Homepage({setWatch,restart,register}) { 
   const[count,setCount]=useState(0);
+
+
 
   const[data,setdata]=useState([
     {title:"Latest & Trending",card:[1,2,3,4,5,6,7,8,9,10]},
@@ -44,7 +48,7 @@ function Homepage({setWatch,restart,register}) {
             <div style={{display:"flex" ,flexDirection:"row", }}>
             <button style={{background:"none"}} onClick={leftArrow}><ArrowBackIosNewOutlinedIcon style={{width:'30px',height:"120px",color:"white"}}/></button>
             <div  style={{display:"flex" ,flexDirection:"row",overflow:"hidden" ,width:"100%"}}>
-              <List card={elem.card} setWatch={setWatch}/>
+              <Link to ='/watch'><List card={elem.card} setWatch={setWatch}/></Link>
             </div>
             <button style={{background:"none"}} onClick={rightArrow}><ArrowForwardIosOutlinedIcon style={{width:'30px',height:"120px",color:"white"}}/></button>
             </div>

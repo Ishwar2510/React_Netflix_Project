@@ -1,12 +1,14 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import {useNavigate} from 'react-router-dom'
 export default function Watch({setWatch}) {
-    function watch(){
-        setWatch(false);
+    const navigate=useNavigate();
+    function back(){
+        navigate('/home');
     }
   return (
     <div className="watch">
       <div className="back">
-      <button onClick={watch}> <ArrowBackIcon  /><span>Back</span></button>
+      <button onClick={back}> <ArrowBackIcon  /><span>Back</span></button>
         
         
       </div>

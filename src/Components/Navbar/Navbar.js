@@ -1,13 +1,22 @@
 import React, { useState } from "react";
-
+import {useNavigate} from 'react-router-dom'
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useDispatch, useSelector } from "react-redux";
 import './Nav.css'
 
 
 function Navbar(props) {
+  const navigate=useNavigate();
     const [isScrolled,setIsScrolled]=useState(false);
+
+    const dispatch = useDispatch();
+    const cuser = useSelector((state) => {
+      console.log(state)
+      return state.logedReducer.user;
+    });
+    console.log(" navbar c user is ",cuser)
     
     window.onscroll=()=>{
       
@@ -23,13 +32,19 @@ function Navbar(props) {
         
         
     }
-    function logout(){
+    function logout() {
+      localStorage.removeItem("users");
+      navigate("/login")
+      dispatch({ type: "logout" });
+    }
+  
+    // function logout(){
      
-      props.restart();
+    //   props.restart();
       
       
 
-    }
+    // }
   return (
     <div className={(isScrolled)?"navbarScrolled":"navbar"}>
       <div className="container">
@@ -45,7 +60,7 @@ function Navbar(props) {
         <SearchIcon/>
         <span>Kid</span>
         <NotificationsIcon/>
-        <span>User</span>
+        <span>{cuser}</span>
 
         
         <div className="profile">

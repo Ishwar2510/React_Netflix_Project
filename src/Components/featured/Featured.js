@@ -2,7 +2,7 @@ import React from 'react'
 import './Featured.css'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
-
+import {Link} from 'react-router-dom'
 function Featured({type,setWatch}) {
   function watch(){
     console.log(setWatch)
@@ -42,7 +42,7 @@ function Featured({type,setWatch}) {
           
            <h1 style={{color:'white'}}>The Avengers</h1>
             <div className='buttons'>
-                <button><PlayArrowIcon/><span onClick={watch}>Play</span></button>
+                <Link to='/watch'><button><PlayArrowIcon/><span onClick={watch}>Play</span></button></Link>
                 <button ><InfoOutlinedIcon/><span>Info</span></button>
             </div>
             <p style={{color:"Yellow"}}>The World is under the Thanoos Threat and its upto the Avengers to Save the World</p>

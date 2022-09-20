@@ -1,13 +1,29 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import "./login.css";
+import { Link,useNavigate } from "react-router";
 
 export default function Login(prop) {
   const [email,setEmail]=useState("");
   const [pwd,setpwd]=useState("");
+  const dispatch=useDispatch();
+  const navigate=useNavigate();
+
+
   function submit(event){
     event.preventDefault();
-
+    if (!email.trim() || !pwd.trim()) {
+      alert("pls enter details")
+      return;
+    }
+    localStorage.setItem(
+      "users",
+      JSON.stringify({ mail: email, pswd: pwd })
+    );
+    navigate("/home")
+    dispatch({ type: "login" });
   }
+
   function einput(event){
     setEmail(event.target.value)
 
@@ -17,16 +33,16 @@ export default function Login(prop) {
 
     
   }
-  function submit(event){
-      event.preventDefault();
+  // function submit(event){
+  //     event.preventDefault();
   
-      // console.log(email,pwd,prop.user[0].email,prop.user[0].password);
-      if(prop.user[0].email==email && prop.user[0].password==pwd){
-        prop.setverified(true);
-      }else{
-        alert("pls enter correct details")
-      }
-  }
+  //     // console.log(email,pwd,prop.user[0].email,prop.user[0].password);
+  //     if(prop.user[0].email==email && prop.user[0].password==pwd){
+  //       prop.setverified(true);
+  //     }else{
+  //       alert("pls enter correct details")
+  //     }
+  // }
   return (
     <div className="llogin">
       <div className="ltop">
@@ -42,8 +58,8 @@ export default function Login(prop) {
       
         <form className="lform" onSubmit={submit}>
           <h1>Sign In</h1>
-          <input className="linput" type="email" placeholder="Email abc@gmail.com" value={email} onChange={einput} />
-          <input className="linput"  type="password" placeholder="Password 123456789" value={pwd} onChange={pinput} />
+          <input className="linput" type="email" placeholder="Email abc@gmail.com" value={email} onChange={einput} required />
+          <input className="linput"  type="password" placeholder="Password 123456789" value={pwd} onChange={pinput} required />
           <button className="lloginButton">Sign In</button>
          
           

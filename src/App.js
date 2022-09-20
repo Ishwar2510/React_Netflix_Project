@@ -6,6 +6,7 @@ import Login from "./Pages/login/Login";
 import Register from "./Pages/register/Register";
 import Watch from "./Pages/watch/Watch";
 import CRoutes from "./Routes/CRoutes";
+import LoginHOC from "./Components/HOC/LoginHOC";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
   return (
     <>
       <CRoutes/>
+      {/* <LoginHOC/> */}
       
       {/* {(!signin && !verified && !watch)&&<Register user={user} setRegister={setRegister} setUsers={setUsers} setSignin={setSignin} setverified={setverified} />}
       {(signin && !verified &&!watch)&& <Login user={user} setverified={setverified}/>}
