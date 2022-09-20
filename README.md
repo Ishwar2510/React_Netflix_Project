@@ -1,10 +1,11 @@
 
-This code is an upgraded one 
-this codes have login authentication feature 
-it also support Routers 
-Couldnot host the client side rendering app in git hub
-as a result a basic  hosted link has been hosted
+This code is an upgraded netflix, wuth login authentication feature. 
+it also support Routers .
+Couldnot host the client side rendering app in git hub,
+as a result a basic  hosted link has been provided
 full functionality can be viewed by cloning this repo..
+
+Hosted Link : https://ishwar2510.github.io/netflix-clone-project/
 
 
 # Getting Started with Create React App
