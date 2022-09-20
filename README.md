@@ -1,5 +1,5 @@
 
-This code is an upgraded netflix, wuth login authentication feature. 
+This code is an upgraded netflix, with login authentication feature. 
 it also support Routers .
 Couldnot host the client side rendering app in git hub,
 as a result a basic  hosted link has been provided
