@@ -24,6 +24,9 @@ export default function Login(prop) {
     }
   }
 
+  function backbtn() {
+    navigate("/register");
+  }
   function einput(event) {
     setEmail(event.target.value);
   }
@@ -51,6 +54,7 @@ export default function Login(prop) {
           />
         </div>
       </div>
+
       <div className="lcontainer">
         <form className="lform" onSubmit={submit}>
           <h1>Sign In</h1>
@@ -71,6 +75,10 @@ export default function Login(prop) {
             required
           />
           <button className="lloginButton">Sign In</button>
+          <br></br>
+          <button className="lloginButton" onClick={backbtn}>
+            Back
+          </button>
         </form>
         {/* <div>
             <h3>New to Netflix  ?</h3>

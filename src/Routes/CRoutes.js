@@ -7,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function CRoutes() {
-  console.log("routes called");
+  
   const loged = useSelector((state) => {
     return state.logedReducer.loged;
   });

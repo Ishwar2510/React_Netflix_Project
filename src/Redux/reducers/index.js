@@ -15,7 +15,7 @@ function logedReducer(state = initialState, action) {
     };
   }
   if (action.type === "logout") {
-    console.log("user is ", { ...state, loged: false });
+    // console.log("user is ", { ...state, loged: false });
     return {
       ...state,
       loged: false,
