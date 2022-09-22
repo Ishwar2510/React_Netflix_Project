@@ -1,5 +1,3 @@
-
-
 const initialState = {
   loged: false,
   user: "",
@@ -9,28 +7,26 @@ const initialState = {
 // }
 
 function logedReducer(state = initialState, action) {
-  
-  if (action.type == "register") {
-    
+  if (action.type === "register") {
     return {
       ...state,
       loged: true,
       user: JSON.parse(localStorage.getItem("users")).mail,
     };
   }
-  if (action.type == "logout") {
-    console.log("user is ",{...state,loged:false})
-    return { 
+  if (action.type === "logout") {
+    console.log("user is ", { ...state, loged: false });
+    return {
       ...state,
-      loged : false
-    }
+      loged: false,
+    };
   }
-  if(action.type=="login"){
-    return{
+  if (action.type === "login") {
+    return {
       ...state,
-      loged:true
-    }
+      loged: true,
+    };
   }
   return state;
 }
-export default logedReducer
+export default logedReducer;

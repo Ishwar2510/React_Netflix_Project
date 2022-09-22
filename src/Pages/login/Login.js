@@ -1,45 +1,38 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import "./login.css";
-import { Link,useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function Login(prop) {
-  const [email,setEmail]=useState("");
-  const [pwd,setpwd]=useState("");
-  const dispatch=useDispatch();
-  const navigate=useNavigate();
+  const [email, setEmail] = useState("");
+  const [pwd, setpwd] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-
-  function submit(event){
+  function submit(event) {
     event.preventDefault();
     if (!email.trim() || !pwd.trim()) {
-      alert("pls enter details")
+      alert("pls enter details");
       return;
     }
-    let checkUser=JSON.parse(localStorage.getItem("users"));
-    if(checkUser.mail==email && checkUser.pswd==pwd){
-      navigate("/home")
+    let checkUser = JSON.parse(localStorage.getItem("users"));
+    if (checkUser.mail === email && checkUser.pswd === pwd) {
+      navigate("/home");
       dispatch({ type: "login" });
-    }else{
-      alert("Check your Credential")
+    } else {
+      alert("Check your Credential");
     }
-   
-
-    
   }
 
-  function einput(event){
-    setEmail(event.target.value)
-
+  function einput(event) {
+    setEmail(event.target.value);
   }
-  function pinput(event){
-    setpwd(event.target.value)
-
-    
+  function pinput(event) {
+    setpwd(event.target.value);
   }
   // function submit(event){
   //     event.preventDefault();
-  
+
   //     // console.log(email,pwd,prop.user[0].email,prop.user[0].password);
   //     if(prop.user[0].email==email && prop.user[0].password==pwd){
   //       prop.setverified(true);
@@ -58,15 +51,26 @@ export default function Login(prop) {
           />
         </div>
       </div>
-      <div className="lcontainer" >
-      
+      <div className="lcontainer">
         <form className="lform" onSubmit={submit}>
           <h1>Sign In</h1>
-          <input className="linput" type="email" placeholder="Email abc@gmail.com" value={email} onChange={einput} required />
-          <input className="linput"  type="password" placeholder="Password 123456789" value={pwd} onChange={pinput} required />
+          <input
+            className="linput"
+            type="email"
+            placeholder="Email abc@gmail.com"
+            value={email}
+            onChange={einput}
+            required
+          />
+          <input
+            className="linput"
+            type="password"
+            placeholder="Password 123456789"
+            value={pwd}
+            onChange={pinput}
+            required
+          />
           <button className="lloginButton">Sign In</button>
-         
-          
         </form>
         {/* <div>
             <h3>New to Netflix  ?</h3>

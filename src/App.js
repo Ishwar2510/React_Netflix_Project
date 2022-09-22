@@ -1,16 +1,13 @@
+// import { useEffect, useState } from "react";
+// import Homepage from "./Pages/Homepage/Homepage";
+// import Login from "./Pages/login/Login";
+// import Register from "./Pages/register/Register";
+// import Watch from "./Pages/watch/Watch";
 
-
-import { useEffect, useState } from "react";
-import Homepage from "./Pages/Homepage/Homepage";
-import Login from "./Pages/login/Login";
-import Register from "./Pages/register/Register";
-import Watch from "./Pages/watch/Watch";
+// import LoginHOC from "./Components/HOC/LoginHOC";
 import CRoutes from "./Routes/CRoutes";
-import LoginHOC from "./Components/HOC/LoginHOC";
-
 
 function App() {
-
   // const [user,setUsers]=useState([{email:"abc@gmail.com",password:"123456789"}]);
   // const [register,setRegister]=useState(false);
   // const [signin,setSignin]=useState(false);
@@ -25,18 +22,18 @@ function App() {
   // }
   // useEffect(()=>{
   //   if(verified){
-      
+
   //     setRegister(false);
-      
+
   //   }
 
   // },[verified])
 
   return (
     <>
-      <CRoutes/>
+      <CRoutes />
       {/* <LoginHOC/> */}
-      
+
       {/* {(!signin && !verified && !watch)&&<Register user={user} setRegister={setRegister} setUsers={setUsers} setSignin={setSignin} setverified={setverified} />}
       {(signin && !verified &&!watch)&& <Login user={user} setverified={setverified}/>}
       
@@ -48,9 +45,7 @@ function App() {
        }
       
        */}
-
     </>
-   
   );
 }
 
