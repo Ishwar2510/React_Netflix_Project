@@ -3,10 +3,10 @@ import "./Lists.css";
 // import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 // import PlayCircleOutlinedIcon from '@mui/icons-material/PlayCircleOutlined';
 
-function List({ card, setWatch }) {
-  function watch() {
-    setWatch(true);
-  }
+function List({ card }) {
+  // function watch() {
+  //   setWatch(true);
+  // }
 
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
@@ -15,7 +15,7 @@ function List({ card, setWatch }) {
           <div key={index}>
             <div
               className="card"
-              onClick={watch}
+              // onClick={watch}
               style={{
                 width: "180px",
                 height: "250px",

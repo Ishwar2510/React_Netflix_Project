@@ -3,11 +3,7 @@ import "./Featured.css";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { Link } from "react-router-dom";
-function Featured({ type, setWatch }) {
-  function watch() {
-    console.log(setWatch);
-    setWatch(true);
-  }
+function Featured({ type }) {
   return (
     <div className="featured">
       {type && (
@@ -46,7 +42,7 @@ function Featured({ type, setWatch }) {
           <Link to="/watch">
             <button>
               <PlayArrowIcon />
-              <span onClick={watch}>Play</span>
+              <span>Play</span>
             </button>
           </Link>
           <button>

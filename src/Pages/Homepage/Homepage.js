@@ -12,22 +12,23 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 function Homepage({ setWatch, restart, register }) {
   // const[count,setCount]=useState(0);
 
-  const [data, setdata] = useState();
+  const [data, setdata] = useState([
+    { title: "Latest & Trending", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { title: "Popular show", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { title: "Popular Movie", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { title: "Hindi Movies", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { title: "Latest & Trending", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { title: "Popular show", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { title: "Popular Movie", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+    { title: "Hindi Movies", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+  ]);
+  const [category, setCategory] = useState([]);
 
   useEffect(() => {
-    setdata([
-      { title: "Latest & Trending", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
-      { title: "Popular show", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
-      { title: "Popular Movie", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
-      { title: "Hindi Movies", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
-      { title: "Latest & Trending", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
-      { title: "Popular show", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
-      { title: "Popular Movie", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
-      { title: "Hindi Movies", card: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
-    ]);
+    setdata();
     setCategory(data);
   }, []);
-  const [category, setCategory] = useState(data);
+
   function leftArrow() {}
   function rightArrow() {}
   return (
